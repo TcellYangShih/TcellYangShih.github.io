@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yang Shih personal electronic card">
+  <title>Yang Shih | Personal Card</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Yang Shih home">
+      <span class="brand-mark">YS</span>
+      <span data-i18n="brand">Yang Shih</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#work" data-i18n="navWork">Milestones</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <span class="sun" aria-hidden="true"></span>
+        <span class="moon" aria-hidden="true"></span>
+      </button>
+      <button class="pill-button" id="langToggle" type="button" aria-label="Switch language">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-panel">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">TMU Pharmacy Freshman</p>
+        <h1 data-i18n="heroTitle">Yang Shih</h1>
+        <p class="hero-text" data-i18n="heroText">Piano, trumpet, swimming, J-pop, and stargazing.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#contact" data-i18n="heroCta">Contact</a>
+          <a class="ghost-action" href="#work" data-i18n="heroSecondary">Milestones</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Yang Shih hero image">
+        <img src="assets/yang-shih-hero.png" alt="Fictional pharmacy and stargazing inspired portrait for Yang Shih">
+        <div class="signal-card signal-one">
+          <span data-i18n="signalOneLabel">Practice energy</span>
+          <strong>98%</strong>
+        </div>
+        <div class="signal-card signal-two">
+          <span data-i18n="signalTwoLabel">Star map points</span>
+          <strong>12.4k</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics section-panel" aria-label="profile highlights">
+      <article>
+        <strong>18</strong>
+        <span data-i18n="metricOne">years old</span>
+      </article>
+      <article>
+        <strong>5</strong>
+        <span data-i18n="metricTwo">core interests</span>
+      </article>
+      <article>
+        <strong>115</strong>
+        <span data-i18n="metricThree">graduation year</span>
+      </article>
+      <article>
+        <strong>88</strong>
+        <span data-i18n="metricFour">J-pop tracks</span>
+      </article>
+    </section>
+
+    <section class="about section-panel" id="about">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="aboutEyebrow">About Me</p>
+        <h2 data-i18n="aboutTitle">A pharmacy freshman with a musical orbit.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card spotlight">
+          <h3 data-i18n="aboutCardTitle">Profile</h3>
+          <p data-i18n="aboutCardText">Born on 2008/3/23. Freshman in the School of Pharmacy at Taipei Medical University.</p>
+        </div>
+        <div class="skill-cloud" aria-label="interests">
+          <span data-i18n="skillOne">Piano</span>
+          <span data-i18n="skillTwo">Trumpet</span>
+          <span data-i18n="skillThree">Swimming</span>
+          <span>J-pop</span>
+          <span data-i18n="skillFive">Stargazing</span>
+          <span data-i18n="skillSix">Pharmacy</span>
+          <span data-i18n="skillSeven">Chemistry Notes</span>
+          <span data-i18n="skillEight">Star Map</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline section-panel" id="work">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="workEyebrow">Milestones</p>
+        <h2 data-i18n="workTitle">Real profile notes with a few fictional highlights.</h2>
+      </div>
+      <div class="timeline-list">
+        <article>
+          <time>2026</time>
+          <h3 data-i18n="storyOneTitle">Taipei Medical University Pharmacy</h3>
+          <p data-i18n="storyOneText">Starting a new chapter as a pharmacy freshman, curious about medicine, human health, and clear communication.</p>
+        </article>
+        <article>
+          <time>2026</time>
+          <h3 data-i18n="storyTwoTitle">Shin Min High School Graduate</h3>
+          <p data-i18n="storyTwoText">Graduated in the 115th academic year, with fictional highlights in music playlists, science notes, and class activity planning.</p>
+        </article>
+        <article>
+          <time>2025</time>
+          <h3 data-i18n="storyThreeTitle">Music, Pool, and Night Sky</h3>
+          <p data-i18n="storyThreeText">A fictional personal project that tracks swim laps, piano practice, trumpet tone, J-pop moods, and constellation logs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="showcase section-panel">
+      <div>
+        <p class="eyebrow" data-i18n="showcaseEyebrow">Signature Style</p>
+        <h2 data-i18n="showcaseTitle">Rational with pharmacy, emotional with music, and always looking up.</h2>
+      </div>
+      <div class="orbital-ui" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="core">YS</div>
+      </div>
+    </section>
+
+    <section class="contact section-panel" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+        <h2 data-i18n="contactTitle">Reach out anytime, or recommend a J-pop song.</h2>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:yang.shih01@gmail.com">
+          <span>Email</span>
+          <strong>yang.shih01@gmail.com</strong>
+        </a>
+        <a href="https://www.instagram.com/yang_shih_0323/" target="_blank" rel="noreferrer">
+          <span>Instagram</span>
+          <strong>@yang_shih_0323</strong>
+        </a>
+        <a href="tel:0901412318">
+          <span data-i18n="phoneLabel">Phone</span>
+          <strong>0901412318</strong>
+        </a>
+        <a href="#top">
+          <span data-i18n="statusLabel">Status</span>
+          <strong data-i18n="statusText">Pharmacy freshman, currently collecting stars.</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span data-i18n="footerText">Copyright 2026 Yang Shih. Personal electronic card.</span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
